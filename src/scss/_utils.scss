@@ -1,0 +1,24 @@
+@mixin border($color) {
+  border: 1px solid transparent;
+}
+@mixin flex-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin btnStyle($color1, $color2) {
+  padding: 1rem;
+  width: 200px;
+  height: 60px;
+  background: linear-gradient(to right, $color1, $color2);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: shadow 1s ease-in 5s forwards;
+  font-size: 1rem;
+}
+.button {
+  width: fit-content;
+  height: fit-content;
+}

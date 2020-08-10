@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.button {
+  width: fit-content;
+  height: fit-content; }
+
+.header {
+  height: 100px;
+  margin-bottom: 50px;
+  background: #0c153d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent; }
+  .header h1 {
+    font-weight: 100;
+    padding: 1rem;
+    color: grey; }
+
+.form {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent; }
+  .form form {
+    width: 400px;
+    height: 450px;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    animation: shadow 1s ease-in 3s forwards; }
+    .form form .form__elem1 {
+      width: 400px;
+      height: 350px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid transparent; }
+      .form form .form__elem1 label {
+        font-size: 2rem; }
+      .form form .form__elem1 input {
+        width: 350px;
+        height: 60px;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border: none;
+        border-bottom: 3px solid pink;
+        transition: all 0.5s ease; }
+        .form form .form__elem1 input:focus {
+          border-bottom: 3px solid #ff274d; }
+      .form form .form__elem1 button {
+        padding: 1rem;
+        width: 200px;
+        height: 60px;
+        background: linear-gradient(to right, orange, orangered);
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: shadow 1s ease-in 5s forwards;
+        font-size: 1rem; }
+
+.footer {
+  width: 100vw;
+  height: 50px;
+  background: #000;
+  margin-top: 100px;
+  color: #808080;
+  padding: 1rem; }
+
+@keyframes shadow {
+  from {
+    box-shadow: 2px 1px 21px 2px #fff; }
+  to {
+    box-shadow: 2px 1px 21px 2px #ddd7d7; } }
+
+@keyframes btnShadow {}
