@@ -9,14 +9,41 @@
 .header {
   height: 100px;
   background: #0c153d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: 1fr;
   border: 1px solid transparent; }
-  .header h1 {
-    font-weight: 100;
-    padding: 1rem;
-    color: grey; }
+  .header .nav {
+    grid-area: 1/1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem; }
+  .header__name {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: 1/2;
+    position: relative;
+    left: 50px; }
+    .header__name h1 {
+      font-weight: 100;
+      padding: 1rem;
+      color: grey; }
+  .header .registration {
+    grid-area: 1/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem; }
+    .header .registration__svg {
+      cursor: pointer;
+      position: relative;
+      right: 50px; }
+      .header .registration__svg:hover {
+        color: orange; }
 
 .form {
   width: 100vw;
