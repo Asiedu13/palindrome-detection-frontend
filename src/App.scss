@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 @import "./scss/utils";
 @import "./scss/header";
 @import "./scss/form";
@@ -14,6 +15,4 @@
   to {
     box-shadow: 2px 1px 21px 2px #ddd7d7;
   }
-}
-@keyframes btnShadow {
 }

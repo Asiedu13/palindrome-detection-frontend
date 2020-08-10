@@ -1,23 +1,26 @@
 .form {
   width: 100vw;
-  height: 500px;
-  @include flex-centering;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
   @include border(green);
 
   form {
     width: 400px;
     height: 450px;
-
     border-radius: 5px;
     padding: 1rem;
     @include flex-centering;
     @include border(red);
     animation: shadow 1s ease-in 3s forwards;
+    z-index: 100;
 
     .form__elem1 {
       width: 400px;
       height: 350px;
-      // @include flex-centering;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -44,6 +47,14 @@
       button {
         @include btnStyle(orange, orangered);
       }
+    }
+  }
+
+  .art {
+    position: absolute;
+    left: -100px;
+    svg {
+      height: 540px;
     }
   }
 }

@@ -1,10 +1,8 @@
 .header {
   height: 100px;
-  margin-bottom: 50px;
   background: rgb(12, 21, 61);
   @include flex-centering;
   @include border(red);
-  // text-align: center;
   h1 {
     font-weight: 100;
     padding: 1rem;
