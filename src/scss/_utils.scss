@@ -17,6 +17,10 @@
   cursor: pointer;
   animation: shadow 1s ease-in 5s forwards;
   font-size: 1rem;
+
+  &:hover {
+    background: linear-gradient(to right, $color2, $color1);
+  }
 }
 .button {
   width: fit-content;

@@ -54,6 +54,7 @@
         padding: 1rem;
         font-size: 1.2rem;
         border: none;
+        border-radius: 4px;
         border-bottom: 3px solid pink;
         transition: all 0.5s ease; }
         .form form .form__elem1 input:focus {
@@ -68,12 +69,19 @@
         border-radius: 5px;
         cursor: pointer;
         animation: shadow 1s ease-in 5s forwards;
-        font-size: 1rem; }
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: all .5s ease; }
+        .form form .form__elem1 button:hover {
+          background: linear-gradient(to right, orangered, orange); }
   .form .art {
     position: absolute;
-    left: -100px; }
+    left: -200px;
+    top: 0px; }
     .form .art svg {
-      height: 540px; }
+      height: 600px; }
 
 .footer {
   width: 100vw;

@@ -37,24 +37,31 @@
         padding: 1rem;
         font-size: 1.2rem;
         border: none;
+        border-radius: 4px;
         border-bottom: 3px solid pink;
         transition: all 0.5s ease;
 
         &:focus {
           border-bottom: 3px solid darken($color: pink, $amount: 30%);
+          
         }
       }
       button {
         @include btnStyle(orange, orangered);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: all .5s ease;
       }
     }
   }
 
   .art {
     position: absolute;
-    left: -100px;
+    left: -200px;
+    top: 0px;
     svg {
-      height: 540px;
+      height: 600px;
     }
   }
 }
