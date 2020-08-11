@@ -4,7 +4,9 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <FontAwesomeIcon icon="bars" color="#fff" size="2x" className="nav" />
+        <div className="nav">
+          <FontAwesomeIcon icon="bars" color="#fff" size="2x" className="nav" />
+        </div>
         <section className="header__name">
           <h1>Palindrome Detector</h1>
         </section>
