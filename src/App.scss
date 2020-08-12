@@ -16,3 +16,11 @@
     box-shadow: 2px 1px 21px 2px #ddd7d7;
   }
 }
+@keyframes move{
+  from{
+    right: 0;
+  }
+  to{
+    right: 20px;
+  }
+}
