@@ -109,7 +109,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        transition: all .5s ease; }
+        transition: all .5s ease;
+        outline: none; }
         .form form .form__elem1 button:hover {
           background: linear-gradient(to right, orangered, orange); }
         .form form .form__elem1 button .move {

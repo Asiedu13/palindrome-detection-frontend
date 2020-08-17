@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Art1 } from "./Utils/Art";
-export default class Form extends Component {
+export default class TestWord extends Component {
   constructor() {
     super();
     this.state = {
@@ -37,6 +37,7 @@ export default class Form extends Component {
               onMouseOut={() => {
                 this.setState({ hovered: false });
               }}
+              onClick={this.handleClick}
             >
               {"Check "}
 

@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class Header extends Component {
+  constructor(props) {
+    super();
+    this.state = {};
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(event) {
+    console.log(`I am working at ${event.target}`);
+  }
   render() {
     return (
       <div className="header">
@@ -16,6 +24,7 @@ export default class Header extends Component {
             color="#fff"
             size="2x"
             className="registration__svg"
+            
           />
         </section>
       </div>

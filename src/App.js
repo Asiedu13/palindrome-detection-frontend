@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import Form from "./components/Form";
+import WordTester from "./components/TestWord";
 import Footer from "./components/Footer";
 export default class App extends Component {
   render() {
     return (
       <div>
         <Header />
-        <Form />
+        <WordTester />
         <Footer />
       </div>
     );
