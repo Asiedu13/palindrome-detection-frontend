@@ -53,7 +53,7 @@
       .header .registration__svg:hover {
         color: orange; }
 
-.form {
+.testword {
   width: 100vw;
   height: 600px;
   display: flex;
@@ -62,7 +62,7 @@
   align-items: center;
   background-size: cover;
   border: 1px solid transparent; }
-  .form form {
+  .testword form {
     width: 400px;
     height: 450px;
     border-radius: 5px;
@@ -73,7 +73,7 @@
     border: 1px solid transparent;
     animation: shadow 1s ease-in 3s forwards;
     z-index: 100; }
-    .form form .form__elem1 {
+    .testword form .form__elem1 {
       width: 400px;
       height: 350px;
       display: flex;
@@ -81,9 +81,9 @@
       align-items: center;
       flex-direction: column;
       border: 1px solid transparent; }
-      .form form .form__elem1 label {
+      .testword form .form__elem1 label {
         font-size: 2rem; }
-      .form form .form__elem1 input {
+      .testword form .form__elem1 input {
         width: 350px;
         height: 60px;
         padding: 1rem;
@@ -93,9 +93,9 @@
         outline: none;
         border-bottom: 3px solid pink;
         transition: all 0.5s ease; }
-        .form form .form__elem1 input:focus {
+        .testword form .form__elem1 input:focus {
           border-bottom: 3px solid #ff274d; }
-      .form form .form__elem1 button {
+      .testword form .form__elem1 button {
         padding: 1rem;
         width: 200px;
         height: 60px;
@@ -109,19 +109,128 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         outline: none; }
-        .form form .form__elem1 button:hover {
+        .testword form .form__elem1 button:hover {
           background: linear-gradient(to right, orangered, orange); }
-        .form form .form__elem1 button .move {
+        .testword form .form__elem1 button .move {
           position: relative;
-          animation: move .6s ease infinite alternate; }
-  .form .art {
+          animation: move 0.6s ease infinite alternate; }
+  .testword .art {
     position: absolute;
     left: -200px;
     top: 0px; }
-    .form .art svg {
+    .testword .art svg {
       height: 600px; }
+
+.form {
+  border: 1px solid transparent;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem; }
+  .form__title {
+    border: 1px solid transparent; }
+    .form__title__content {
+      font-size: 2rem;
+      padding: 1rem;
+      color: royalblue;
+      text-decoration: underline; }
+    .form__title__desc {
+      padding: 1rem;
+      width: 230px;
+      color: grey; }
+  .form form {
+    border: 1px solid transparent;
+    height: inherit;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 250px;
+    border-radius: 5px;
+    padding: 50px 0;
+    box-shadow: 2px 1px 30px 2px rgba(98, 100, 235, 0.5); }
+    .form form .form__field {
+      border: 1px solid transparent;
+      padding: 1rem;
+      height: 100px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      .form form .form__field label {
+        font-size: 1rem; }
+      .form form .form__field input {
+        height: 30px;
+        width: 300px;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: none;
+        background: #86eee9;
+        color: #fff; }
+      .form form .form__field button {
+        height: 50px;
+        width: 300px;
+        color: #fff;
+        font-size: 1.1rem;
+        background: linear-gradient(to right, royalblue, deepskyblue, lightskyblue);
+        box-shadow: 2px 1px 21px 2px #99afef;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; }
+  .form .formart {
+    position: absolute;
+    right: 0px;
+    z-index: -10; }
+    .form .formart svg {
+      width: 600px;
+      height: 800px;
+      fill: orange; }
+  .form .signOptions {
+    height: 500px;
+    width: 500px;
+    margin: 10px 300px;
+    box-shadow: 2px 1px 21px 2px #ddd7d7;
+    border: 1px solid transparent; }
+    .form .signOptions__header {
+      border: 1px solid transparent;
+      padding: 1rem 0rem 0 2rem;
+      margin: 10px 0; }
+    .form .signOptions__optionsList {
+      width: 500px;
+      height: inherit;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .form .signOptions__optionsList__option {
+        border: 1px solid transparent;
+        height: 70px;
+        margin: 0px 0 50px 0;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .form .signOptions__optionsList__option button {
+          height: inherit;
+          width: 400px;
+          border: none;
+          font-size: 1.2rem;
+          color: #fff;
+          border-radius: 4px;
+          cursor: pointer; }
+        .form .signOptions__optionsList__option #Fb {
+          background: royalblue;
+          box-shadow: 2px 1px 21px 2px #99afef; }
+        .form .signOptions__optionsList__option #Gg {
+          background: #ff6666;
+          box-shadow: 2px 1px 21px 2px #f6b3b3; }
+        .form .signOptions__optionsList__option #Em {
+          background: red;
+          box-shadow: 2px 1px 21px 2px #ff6666; }
 
 .footer {
   width: 100vw;

@@ -1,0 +1,73 @@
+.testword {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  @include border(green);
+
+  form {
+    width: 400px;
+    height: 450px;
+    border-radius: 5px;
+    padding: 1rem;
+    @include flex-centering;
+    @include border(red);
+    animation: shadow 1s ease-in 3s forwards;
+    z-index: 100;
+
+    .form__elem1 {
+      width: 400px;
+      height: 350px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      @include border(orange);
+
+      label {
+        font-size: 2rem;
+        // color: grey;
+      }
+      input {
+        width: 350px;
+        height: 60px;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        border-bottom: 3px solid pink;
+        transition: all 0.5s ease;
+
+        &:focus {
+          border-bottom: 3px solid darken($color: pink, $amount: 30%);
+        }
+      }
+      button {
+        @include btnStyle(orange, orangered);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: all 0.5s ease;
+        outline: none;
+
+        .move {
+          position: relative;
+          animation: move 0.6s ease infinite alternate;
+        }
+      }
+    }
+  }
+
+  .art {
+    position: absolute;
+    left: -200px;
+    top: 0px;
+    svg {
+      height: 600px;
+    }
+  }
+}

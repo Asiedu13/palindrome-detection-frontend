@@ -5,6 +5,7 @@
 
 @import "./scss/utils";
 @import "./scss/header";
+@import "./scss/testword";
 @import "./scss/form";
 @import "./scss/footer";
 
@@ -16,11 +17,11 @@
     box-shadow: 2px 1px 21px 2px #ddd7d7;
   }
 }
-@keyframes move{
-  from{
+@keyframes move {
+  from {
     right: 0;
   }
-  to{
+  to {
     right: 20px;
   }
 }

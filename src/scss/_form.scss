@@ -1,75 +1,143 @@
 .form {
-  width: 100vw;
-  height: 600px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  background-size: cover;
-  @include border(green);
+  @include border(red);
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
 
+  &__title {
+    @include border(green);
+    &__content {
+      font-size: 2rem;
+      padding: 1rem;
+      color: royalblue;
+      text-decoration: underline;
+    }
+    &__desc {
+      padding: 1rem;
+      width: 230px;
+      color: grey;
+    }
+  }
   form {
-    width: 400px;
-    height: 450px;
+    @include border(royalblue);
+    height: inherit;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 250px;
     border-radius: 5px;
-    padding: 1rem;
-    @include flex-centering;
-    @include border(red);
-    animation: shadow 1s ease-in 3s forwards;
-    z-index: 100;
+    padding: 50px 0;
+    box-shadow: 2px 1px 30px 2px rgba(98, 100, 235, 0.5);
 
-    .form__elem1 {
-      width: 400px;
-      height: 350px;
+    .form__field {
+      @include border(purple);
+      padding: 1rem;
+      height: 100px;
+      width: 50%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-direction: column;
-      @include border(orange);
+      justify-content: space-around;
+      align-items: center;
 
       label {
-        font-size: 2rem;
-        // color: grey;
+        font-size: 1rem;
       }
       input {
-        width: 350px;
-        height: 60px;
-        padding: 1rem;
-        font-size: 1.2rem;
+        height: 30px;
+        width: 300px;
+        padding: 0.5rem;
+        border-radius: 5px;
         border: none;
-        border-radius: 4px;
-        outline: none;
-        border-bottom: 3px solid pink;
-        transition: all 0.5s ease;
+        background: #86eee9;
+        color: #fff;
+      }
+      button {
+        height: 50px;
+        width: 300px;
+        color: #fff;
+        font-size: 1.1rem;
+        background: linear-gradient(
+          to right,
+          royalblue,
+          deepskyblue,
+          lightskyblue
+        );
+        box-shadow: 2px 1px 21px 2px lighten(rgb(65, 105, 225), 20%);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .formart {
+    position: absolute;
+    right: 0px;
+    z-index: -10;
+    svg {
+      width: 600px;
+      height: 800px;
+      fill: orange;
+      // border:1px solid green;
+    }
+  }
+  .signOptions {
+    height: 500px;
+    width: 500px;
+    margin: 10px 300px;
+    box-shadow: 2px 1px 21px 2px #ddd7d7;
+    @include border(rebeccapurple);
 
-        &:focus {
-          border-bottom: 3px solid darken($color: pink, $amount: 30%);
+    &__header {
+      @include border(rebeccapurple);
+      padding: 1rem 0rem 0 2rem;
+      margin: 10px 0;
+    }
+
+    &__optionsList {
+      width: 500px;
+      height: inherit;
+      @include border(rebeccapurple);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__option {
+        @include border(cyan);
+        // padding: 1rem;
+        height: 70px;
+        margin: 0px 0 50px 0;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          height: inherit;
+          width: 400px;
+          border: none;
+          font-size: 1.2rem;
+          color: #fff;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        #Fb {
+          background: royalblue;
+          box-shadow: 2px 1px 21px 2px lighten(royalblue,20%);
+        }
+        #Gg {
+          background: lighten(red, 20%);
+          box-shadow: 2px 1px 21px 2px lighten(rgb(236, 87, 87),20%);
+          
+        }
+
+        #Em {
+          background: red;
+          box-shadow: 2px 1px 21px 2px lighten(red,20%);
           
         }
       }
-      button {
-        @include btnStyle(orange, orangered);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        transition: all .5s ease;
-        outline: none;
-
-        .move{
-          position: relative;
-          animation: move .6s ease infinite alternate;
-        }
-      }
-
-    }
-  }
-
-  .art {
-    position: absolute;
-    left: -200px;
-    top: 0px;
-    svg {
-      height: 600px;
     }
   }
 }

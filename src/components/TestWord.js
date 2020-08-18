@@ -16,7 +16,7 @@ export default class TestWord extends Component {
   }
   render() {
     return (
-      <div className="form">
+      <div className="testword">
         <form action="#" method="post">
           <div className="form__elem1">
             <label htmlFor="word">Word</label>
