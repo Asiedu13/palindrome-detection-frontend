@@ -127,7 +127,7 @@
   border: 1px solid transparent;
   width: 100%;
   height: fit-content;
-  padding: 1rem; }
+  box-shadow: 2px 1px 30px 2px rgba(98, 100, 235, 0.5); }
   .form__title {
     border: 1px solid transparent; }
     .form__title__content {
@@ -139,18 +139,71 @@
       padding: 1rem;
       width: 230px;
       color: grey; }
+  .form .manualSignUp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    box-shadow: 2px 1px 30px 2px rgba(98, 100, 235, 0.5); }
+    .form .manualSignUp .manualPart1 {
+      background: #423399;
+      background: linear-gradient(to top, #663399, #333599);
+      width: 900px;
+      clip-path: polygon(0 100%, 0% 5%, 30% 10%, 100% 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      color: #fff;
+      padding: 1rem 4rem; }
+      .form .manualSignUp .manualPart1 .form2 .inputFile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        z-index: -1; }
+      .form .manualSignUp .manualPart1 .form2 .inputFile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: #fff;
+        width: 200px;
+        height: 100px;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 5px dotted #ccc;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer; }
+      .form .manualSignUp .manualPart1 .form2 .inputFile:focus + label,
+      .form .manualSignUp .manualPart1 .form2 .inputFile + label:hover {
+        background-color: red; }
+      .form .manualSignUp .manualPart1 .form2 .inputFile:focus + label {
+        outline: 1px dotted #fff;
+        outline: -webkit-focus-ring-color auto 5px; }
+      .form .manualSignUp .manualPart1 .logo {
+        position: relative;
+        top: 30px; }
+        .form .manualSignUp .manualPart1 .logo h3 {
+          font-weight: 100;
+          font-size: 2rem; }
+    .form .manualSignUp .manualPart2 {
+      border: 1px solid transparent;
+      padding: 1rem;
+      position: relative;
+      top: 20px; }
+      .form .manualSignUp .manualPart2 h2 {
+        font-weight: 100;
+        font-size: 2rem; }
   .form form {
     border: 1px solid transparent;
     height: inherit;
-    width: 57%;
+    width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin: 5px 250px;
     border-radius: 5px;
-    padding: 50px 0;
-    box-shadow: 2px 1px 30px 2px rgba(98, 100, 235, 0.5); }
+    padding: 50px 0; }
     .form form .form__field {
       border: 1px solid transparent;
       padding: 1rem;
@@ -158,8 +211,7 @@
       width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      align-items: center; }
+      justify-content: space-around; }
       .form form .form__field label {
         font-size: 1rem; }
       .form form .form__field input {
@@ -168,7 +220,7 @@
         padding: 0.5rem;
         border-radius: 5px;
         border: none;
-        background: #86eee9;
+        background: #3469db;
         color: #fff; }
       .form form .form__field button {
         height: 50px;
@@ -180,6 +232,8 @@
         border: none;
         border-radius: 5px;
         cursor: pointer; }
+        .form form .form__field button:hover {
+          background: linear-gradient(to right, deepskyblue, lightskyblue, royalblue); }
   .form .formart {
     position: absolute;
     right: 0px;

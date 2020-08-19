@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FormItem from "./FormComp/FormItems";
+import { ManualSignUp } from "./FormComp/ManualSignUp";
 import FormArt from "./FormComp/FormArt";
 
 export default class Form extends Component {
@@ -11,10 +11,23 @@ export default class Form extends Component {
       // else if facebook use facebook API
       // else if twitter use twitter API
       // else return undefined
-      type: "manual",
+      type: undefined,
     };
-   
+    // Handle click and submissions here
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleClick(event) {
+    // Get name attribute from event
+    let { name } = event.target;
+    // set it to type in state
+    this.setState({ type: name });
+  }
+
+  // handle form submission
+  handleSubmit() {}
+
   render() {
     return (
       <section className="form">
@@ -37,6 +50,7 @@ export default class Form extends Component {
                 className="signOptions__optionsList__option__btn"
                 id="Fb"
                 name="facebook"
+                onClick={this.handleClick}
               >
                 Facebook
               </button>
@@ -46,6 +60,7 @@ export default class Form extends Component {
                 className="signOptions__optionsList__option__btn"
                 id="Gg"
                 name="google"
+                onClick={this.handleClick}
               >
                 Google
               </button>
@@ -55,6 +70,7 @@ export default class Form extends Component {
                 className="signOptions__optionsList__option__btn"
                 id="Em"
                 name="manual"
+                onClick={this.handleClick}
               >
                 Email
               </button>
@@ -62,7 +78,7 @@ export default class Form extends Component {
           </div>
         </section>
 
-        {/* {<FormItem />} */}
+        {this.state.type === "manual" ? <ManualSignUp /> : ""}
       </section>
     );
   }
