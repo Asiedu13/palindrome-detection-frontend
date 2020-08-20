@@ -62,7 +62,7 @@
         justify-content: center;
         align-items: center;
         button {
-          height: inherit;
+          height: 70px;
           width: 400px;
           border: none;
           font-size: 1.2rem;
@@ -216,6 +216,10 @@
         }
       }
     }
+  }
+  .have-account{
+    text-align:center;
+    @include border(black);
   }
 }
 

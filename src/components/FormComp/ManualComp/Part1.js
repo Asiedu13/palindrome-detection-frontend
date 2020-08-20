@@ -25,7 +25,7 @@ export default class Part1 extends Component {
         </section>
 
         <section className="logo">
-          <h3>Asiedu.Inc</h3>
+          <h3>LexPriCo</h3>
         </section>
       </div>
     );

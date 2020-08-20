@@ -4,9 +4,9 @@ export default class Part2 extends Component {
   render() {
     return (
       <div>
-          <header className="manualPart2">
-              <h2>Sign Up</h2>
-          </header>
+        <header className="manualPart2">
+          <h2>Sign Up</h2>
+        </header>
         <form action="post" encType="urlenconded">
           <div className="form__field">
             <label htmlFor="username">Username</label>
@@ -26,6 +26,7 @@ export default class Part2 extends Component {
           </div>
           <div className="form__field">
             <button type="submit">I'm in</button>
+          <a href="#" className="have-account">I already have an account</a>
           </div>
         </form>
       </div>

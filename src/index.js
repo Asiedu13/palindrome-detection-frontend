@@ -16,10 +16,11 @@ import {
   faAngleDoubleRight,
   faUser,
   faBars,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 import { ManualSignUp } from "./components/FormComp/ManualSignUp";
 
-library.add(fab, faCheckSquare, faCoffee, faAngleDoubleRight, faUser, faBars);
+library.add(fab, faHome ,faCheckSquare, faCoffee, faAngleDoubleRight, faUser, faBars);
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -28,9 +29,8 @@ ReactDOM.render(
         <Route path="/" exact component={App} />
         <Route path="/formoptions" component={FormOptions} />
         <Route path="/signup" component={ManualSignUp} />
-
-        <Footer />
       </Switch>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
