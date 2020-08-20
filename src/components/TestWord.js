@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Art1 } from "./Utils/Art";
+
 export default class TestWord extends Component {
   constructor() {
     super();

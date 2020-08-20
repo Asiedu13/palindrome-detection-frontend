@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ManualSignUp } from "./FormComp/ManualSignUp";
 import FormArt from "./FormComp/FormArt";
-
+import { Link } from "react-router-dom";
 export default class Form extends Component {
   constructor(props) {
     super();
@@ -41,7 +41,7 @@ export default class Form extends Component {
 
         <section className="signOptions">
           <div className="signOptions__header">
-            <h3 className="signOptions__header__content">Sign in with:</h3>
+            <h3 className="signOptions__header__content">Sign up with:</h3>
           </div>
 
           <div className="signOptions__optionsList">
@@ -65,20 +65,22 @@ export default class Form extends Component {
                 Google
               </button>
             </div>
-            <div className="signOptions__optionsList__option">
-              <button
-                className="signOptions__optionsList__option__btn"
-                id="Em"
-                name="manual"
-                onClick={this.handleClick}
-              >
-                Email
-              </button>
-            </div>
+              <div className="signOptions__optionsList__option">
+                <Link to="/signup">
+                <button
+                  className="signOptions__optionsList__option__btn"
+                  id="Em"
+                  name="manual"
+                  onClick={this.handleClick}
+                >
+                  Email
+                </button>
+            </Link>
+              </div>
           </div>
         </section>
 
-        {this.state.type === "manual" ? <ManualSignUp /> : ""}
+        {/* {this.state.type === "manual" ? <ManualSignUp /> : ""} */}
       </section>
     );
   }

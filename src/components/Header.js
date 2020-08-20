@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class Header extends Component {
   constructor(props) {
@@ -18,15 +19,17 @@ export default class Header extends Component {
         <section className="header__name">
           <h1>Palindrome Detector</h1>
         </section>
-        <section className="registration">
-          <FontAwesomeIcon
-            icon="user"
-            color="#fff"
-            size="2x"
-            className="registration__svg"
+          <section className="registration">
             
-          />
-        </section>
+        <Link to="/formoptions">
+            <FontAwesomeIcon
+              icon="user"
+              color="#fff"
+              size="2x"
+              className="registration__svg"
+            />
+        </Link>
+          </section>
       </div>
     );
   }
