@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class Header extends Component {
   constructor(props) {
     super();
@@ -13,9 +12,6 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        {/* <div className="nav">
-          <FontAwesomeIcon icon="bars" color="#fff" size="2x" className="nav" />
-        </div> */}
         <section className="header__name">
           <h1>Palindrome Detector</h1>
         </section>
@@ -26,16 +22,7 @@ export default class Header extends Component {
           <Link to="#">
             <h2>About</h2>
           </Link>
-          <Link to="#">
-            <h2>Contacts</h2>
-          </Link>
           <Link to="/formoptions">
-            {/* <FontAwesomeIcon
-              icon="user"
-              color="#fff"
-              size="2x"
-              className="registration__svg"
-            /> */}
             <h2>SignUp</h2>
           </Link>
         </section>

@@ -9,18 +9,24 @@ import FormOptions from "./components/FormOptions";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fab, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import {
   faCheckSquare,
   faCoffee,
   faAngleDoubleRight,
   faUser,
   faBars,
-  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 import { ManualSignUp } from "./components/FormComp/ManualSignUp";
-
-library.add(fab, faHome ,faCheckSquare, faCoffee, faAngleDoubleRight, faUser, faBars);
+library.add(
+  fab,
+  faCheckSquare,
+  faFacebook,
+  faCoffee,
+  faAngleDoubleRight,
+  faUser,
+  faBars
+);
 ReactDOM.render(
   <React.StrictMode>
     <Router>

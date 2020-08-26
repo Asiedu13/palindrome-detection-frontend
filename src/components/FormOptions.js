@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ManualSignUp } from "./FormComp/ManualSignUp";
 import FormArt from "./FormComp/FormArt";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 export default class Form extends Component {
   constructor(props) {
     super();
@@ -52,7 +53,7 @@ export default class Form extends Component {
                 name="facebook"
                 onClick={this.handleClick}
               >
-                Facebook
+                 <FontAwesomeIcon icon="Facebook" /> Facebook
               </button>
             </div>
             <div className="signOptions__optionsList__option">
