@@ -2,7 +2,6 @@
   @include border(red);
   width: 100%;
   height: fit-content;
-  // padding: 1rem;
   box-shadow: 2px 1px 30px 2px rgba(98, 100, 235, 0.5);
 
   &__title {
@@ -27,7 +26,6 @@
       width: 600px;
       height: 800px;
       fill: orange;
-      // border:1px solid green;
     }
   }
   .signOptions {
@@ -138,6 +136,22 @@
         outline: 1px dotted #fff;
         outline: -webkit-focus-ring-color auto 5px;
       }
+      .gender {
+        width: 200px;
+        height: 50px;
+        padding: 1rem;
+        @include border(#fff);
+
+        label {
+          display: flex;
+          flex-direction: row;
+          justify-content: baseline;
+          align-items: baseline;
+          p {
+            padding-right: 1rem;
+          }
+        }
+      }
     }
     .logo {
       position: relative;
@@ -207,19 +221,19 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        &:hover{
+        &:hover {
           background: linear-gradient(
             to right,
             deepskyblue,
-            lightskyblue ,royalblue
+            lightskyblue,
+            royalblue
           );
         }
       }
     }
   }
-  .have-account{
-    text-align:center;
+  .have-account {
+    text-align: center;
     @include border(black);
   }
 }
-

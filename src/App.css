@@ -241,6 +241,18 @@
     .manualSignUp .manualPart1 .form2 .inputFile:focus + label {
       outline: 1px dotted #fff;
       outline: -webkit-focus-ring-color auto 5px; }
+    .manualSignUp .manualPart1 .form2 .gender {
+      width: 200px;
+      height: 50px;
+      padding: 1rem;
+      border: 1px solid transparent; }
+      .manualSignUp .manualPart1 .form2 .gender label {
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+        align-items: baseline; }
+        .manualSignUp .manualPart1 .form2 .gender label p {
+          padding-right: 1rem; }
     .manualSignUp .manualPart1 .logo {
       position: relative;
       top: 30px; }
