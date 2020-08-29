@@ -292,8 +292,11 @@
         padding: 0.5rem;
         border-radius: 5px;
         border: none;
-        background: #b6c9f2;
-        color: #fff; }
+        background: #9999ff;
+        color: #fff;
+        transition: all .5s ease; }
+        .manualSignUp form .form__field input:hover {
+          border-bottom: 2px solid red; }
       .manualSignUp form .form__field button {
         height: 50px;
         width: 300px;

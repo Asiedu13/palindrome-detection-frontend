@@ -203,8 +203,13 @@
         padding: 0.5rem;
         border-radius: 5px;
         border: none;
-        background: lighten($color: #3469db, $amount: 30%);
+        background: lighten($color: blue, $amount: 30%);
         color: #fff;
+        transition: all .5s ease;
+
+        &:hover{
+          border-bottom: 2px solid red;
+        }
       }
       button {
         height: 50px;
