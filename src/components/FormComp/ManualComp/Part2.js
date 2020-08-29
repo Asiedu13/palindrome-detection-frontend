@@ -44,7 +44,7 @@ export default class Part2 extends Component {
       words: [],
     };
     SignUp(user);
-    console.log(user);
+    
   }
   handleSignIn() {}
 
@@ -129,6 +129,7 @@ async function SignUp(user) {
   });
   let result = await response.json();
   console.log(result.message);
+  window.location = `/`
 }
 
 // async function SignIn(username, passwd) {
