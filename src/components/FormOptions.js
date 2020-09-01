@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ManualSignUp } from "./FormComp/ManualSignUp";
 import FormArt from "./FormComp/FormArt";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class Form extends Component {
   constructor(props) {
     super();
@@ -53,7 +53,7 @@ export default class Form extends Component {
                 name="facebook"
                 onClick={this.handleClick}
               >
-                 <FontAwesomeIcon icon="Facebook" /> Facebook
+                <FontAwesomeIcon icon="Facebook" /> Facebook
               </button>
             </div>
             <div className="signOptions__optionsList__option">
@@ -66,8 +66,8 @@ export default class Form extends Component {
                 Google
               </button>
             </div>
-              <div className="signOptions__optionsList__option">
-                <Link to="/signup">
+            <div className="signOptions__optionsList__option">
+              <Link to="/signup">
                 <button
                   className="signOptions__optionsList__option__btn"
                   id="Em"
@@ -76,12 +76,10 @@ export default class Form extends Component {
                 >
                   Email
                 </button>
-            </Link>
-              </div>
+              </Link>
+            </div>
           </div>
         </section>
-
-        {/* {this.state.type === "manual" ? <ManualSignUp /> : ""} */}
       </section>
     );
   }

@@ -290,13 +290,14 @@
         height: 30px;
         width: 300px;
         padding: 0.5rem;
-        border-radius: 5px;
         border: none;
-        background: #9999ff;
-        color: #fff;
-        transition: all .5s ease; }
-        .manualSignUp form .form__field input:hover {
-          border-bottom: 2px solid red; }
+        border-bottom: 2px solid blue;
+        transition: all 0.5s ease;
+        outline: none; }
+        .manualSignUp form .form__field input:focus {
+          border-block-end-style: dotted;
+          border-block-end-width: 10px;
+          border-block-end-color: blue; }
       .manualSignUp form .form__field button {
         height: 50px;
         width: 300px;

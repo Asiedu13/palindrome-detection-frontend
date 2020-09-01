@@ -5,8 +5,9 @@ export default class Part2 extends Component {
   constructor(props) {
     super();
     this.state = {
-      username: "",
+      email: "",
       password: "",
+      color: "blue",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleState = this.handleState.bind(this);
@@ -25,7 +26,7 @@ export default class Part2 extends Component {
       bool === true
     ) {
       this.setState({ [name]: value });
-      console.log(this.state.username);
+      console.log(this.state.email);
       console.log(this.state.password);
     } else if ((name !== "") & (value !== "") && bool == false) {
       this.setState((prevState) => func());
@@ -39,14 +40,22 @@ export default class Part2 extends Component {
   async handleSignUp(e) {
     e.preventDefault();
     const user = {
-      username: this.state.username,
+      username: this.state.email,
       password: this.state.password,
       words: [],
     };
     SignUp(user);
-    
   }
-  handleSignIn() {}
+
+  handleSignIn(e) {
+    e.preventDefault();
+    const user = {
+      username: this.state.email,
+      password: this.state.password,
+      words: [],
+    };
+    SignIn(user);
+  }
 
   render() {
     return (
@@ -61,14 +70,16 @@ export default class Part2 extends Component {
               onSubmit={context.signUp ? this.handleSignUp : this.handleSignIn}
             >
               <div className="form__field">
-                <label htmlFor="username">Username</label>
+                <label htmlFor="email">Email</label>
                 <div>
                   <input
                     type="text"
-                    name="username"
-                    id="username"
+                    name="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                    onFocus={this.handleFocus}
                     onChange={this.handleChange}
-                    value={this.state.username}
+                    value={this.state.email}
                   />
                 </div>
               </div>
@@ -78,8 +89,10 @@ export default class Part2 extends Component {
                   type="password"
                   name="password"
                   id="passwd"
+                  placeholder="eXample123"
                   onChange={this.handleChange}
                   value={this.state.password}
+                  onFocus={this.handleFocus}
                 />
               </div>
               <div className="form__field">
@@ -94,7 +107,6 @@ export default class Part2 extends Component {
                             "2px 1px 21px 2px rgba(245, 119, 74, 0.87)",
                         }
                   }
-                  // onSubmit={this.handleSubmit}
                 >
                   {context.signUp ? "I'm in" : "Let's continue"}
                 </button>
@@ -119,22 +131,40 @@ export default class Part2 extends Component {
 
 // Api Calls
 async function SignUp(user) {
-  console.log(user);
-  let response = await fetch("http://localhost:4000/api/users/include", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(user),
-  });
-  let result = await response.json();
-  console.log(result.message);
-  window.location = `/`
+  try {
+    console.log(user);
+    let response = await fetch("http://localhost:4000/api/users/include", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+    let result = await response.json();
+    console.log(result.message);
+  } catch (err) {
+    console.log(`New error: ${err}`);
+  } finally {
+    // Do something here
+    console.log("What next?");
+  }
 }
 
-// async function SignIn(username, passwd) {
-//   let user = {
-//     username,
-//     password: passwd,
-//   };
-// }
+async function SignIn(user) {
+  try {
+    console.log(user);
+    let response = await fetch(`http://localhost:4000/api/users/login`, {
+      method: "POST",
+      headers: {
+        "Context-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+    let result = await response.json();
+    console.log(result.message);
+  } catch (err) {
+    console.log(`New error: ${err}`);
+  } finally {
+    // do something
+  }
+}

@@ -201,14 +201,15 @@
         height: 30px;
         width: 300px;
         padding: 0.5rem;
-        border-radius: 5px;
         border: none;
-        background: lighten($color: blue, $amount: 30%);
-        color: #fff;
-        transition: all .5s ease;
+        border-bottom: 2px solid blue;
+        transition: all 0.5s ease;
+        outline: none;
 
-        &:hover{
-          border-bottom: 2px solid red;
+        &:focus {
+          border-block-end-style: dotted;
+          border-block-end-width: 10px;
+          border-block-end-color: blue;
         }
       }
       button {
