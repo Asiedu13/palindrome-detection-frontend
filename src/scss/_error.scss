@@ -1,0 +1,41 @@
+.form-error {
+  width: 400px;
+  height: 260px;
+  box-shadow: 2px 1px 30px 2px #c4c4c4;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  //   align-items: center;
+  @include border(red);
+
+  &__header {
+    height: 50%;
+    @include border(red);
+
+    .closeIcon {
+      display: flex;
+      justify-content: flex-end;
+      height: 30px;
+      @include border(orange);
+    }
+    .error__content {
+      @include border(deepskyblue);
+      height: 90px;
+      p {
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 2rem 2.5rem;
+        color: grey;
+      }
+    }
+  }
+
+  &__options {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include border(blue);
+  }
+}

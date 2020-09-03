@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import MyContext from "../../../Contexts/MyContext";
-
+import ErrorMsg from "../../Msgs/Error";
+import Error from "../../Msgs/Error";
 export default class Part2 extends Component {
   constructor(props) {
     super();
     this.state = {
       email: "",
       password: "",
-      color: "blue",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleState = this.handleState.bind(this);
     this.handleSignUp = this.handleSignUp.bind(this);
     this.handleSignIn = this.handleSignIn.bind(this);
+    this.SignUp = this.SignUp.bind(this);
   }
   // Call this method when input values change
   handleChange(e) {
@@ -38,24 +39,53 @@ export default class Part2 extends Component {
   }
   // Handle Submit to server
   async handleSignUp(e) {
-    e.preventDefault();
+    if (e !== undefined) {
+      e.preventDefault();
+    }
     const user = {
-      username: this.state.email,
+      email: this.state.email,
       password: this.state.password,
       words: [],
     };
-    SignUp(user);
+   this.SignUp(user);
   }
 
   handleSignIn(e) {
     e.preventDefault();
     const user = {
-      username: this.state.email,
+      email: this.state.email,
       password: this.state.password,
       words: [],
     };
     SignIn(user);
   }
+  async SignUp (user) {
+    try {
+      // console.log(user);
+      let response = await fetch("http://localhost:4000/api/users/include", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      let result = await response.json();
+      // console.log(result.message);
+      return result;
+    } catch (err) {
+      console.log(`New error: ${err}`);
+      return <ErrorMsg click={this.handleClick} />;
+    }
+  }
+  
+
+  handleClick = (bool) => {
+    // if (bool) {
+    //   SignUp(this.state)
+    // } else {
+    //   SignIn(this.state)
+    // }
+  };
 
   render() {
     return (
@@ -73,11 +103,10 @@ export default class Part2 extends Component {
                 <label htmlFor="email">Email</label>
                 <div>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     id="email"
                     placeholder="example@gmail.com"
-                    onFocus={this.handleFocus}
                     onChange={this.handleChange}
                     value={this.state.email}
                   />
@@ -92,7 +121,6 @@ export default class Part2 extends Component {
                   placeholder="eXample123"
                   onChange={this.handleChange}
                   value={this.state.password}
-                  onFocus={this.handleFocus}
                 />
               </div>
               <div className="form__field">
@@ -130,41 +158,23 @@ export default class Part2 extends Component {
 // Handling state setting
 
 // Api Calls
-async function SignUp(user) {
-  try {
-    console.log(user);
-    let response = await fetch("http://localhost:4000/api/users/include", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    let result = await response.json();
-    console.log(result.message);
-  } catch (err) {
-    console.log(`New error: ${err}`);
-  } finally {
-    // Do something here
-    console.log("What next?");
-  }
-}
 
 async function SignIn(user) {
-  try {
-    console.log(user);
-    let response = await fetch(`http://localhost:4000/api/users/login`, {
-      method: "POST",
-      headers: {
-        "Context-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    let result = await response.json();
-    console.log(result.message);
-  } catch (err) {
-    console.log(`New error: ${err}`);
-  } finally {
-    // do something
-  }
+  // console.log(user);
+  let response = await fetch(`http://localhost:4000/api/users/login`, {
+    method: "POST",
+    headers: {
+      "Context-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  });
+  let result = await response.json();
+  console.log(result.message);
+  return result.message;
+  // } catch (err) {
+  //   console.log(`New error: ${err}`);
+  // } finally {
+  //   // do something
+  //   console.log(`What next?`);
+  // }
 }

@@ -16,6 +16,8 @@ import {
   faAngleDoubleRight,
   faUser,
   faBars,
+  faCross,
+  
 } from "@fortawesome/free-solid-svg-icons";
 import { ManualSignUp } from "./components/FormComp/ManualSignUp";
 library.add(
@@ -25,7 +27,8 @@ library.add(
   faCoffee,
   faAngleDoubleRight,
   faUser,
-  faBars
+  faBars,
+  faCross,
 );
 ReactDOM.render(
   <React.StrictMode>

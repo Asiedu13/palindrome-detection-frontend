@@ -10,8 +10,10 @@ export default class Btn extends PureComponent {
 
   render() {
     return (
-      <div className="button">
-        
+      <div id="button">
+        <button onClick={this.props.click} >
+          {this.props.label}
+        </button>
       </div>
     );
   }
