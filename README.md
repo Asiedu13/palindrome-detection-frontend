@@ -1,5 +1,3 @@
 ## Palindrome Detector
-There really isn't much to see here
-
-You can help out with the backend or make prototypes for the UI of the frontend. 
+This application simply determines if a word is a palindrome or not. As a user, you can signIn to keep track of your words.
 Pls place prototypes in the prototype folder
